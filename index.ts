@@ -1,17 +1,9 @@
 import inquirer from 'inquirer';
 
-inquirer
-  .prompt(['hello'
-    
-  ])
-  .then((answers) => {
-    console.log(answers,'answers')
-    // Use user feedback for... whatever!!
-  })
-  .catch((error) => {
-    if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else went wrong
-    }
-  });
+let answers = await inquirer.prompt([{
+    name: "age",
+    type: "number",
+    message: "Enter your Age:"}
+]);
+
+console.log("Insha Allah, in " + (60 - answers.age) + " years you will be 60 years old.");

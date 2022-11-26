@@ -1,7 +1,6 @@
 import inquirer from 'inquirer';
 inquirer
-    .prompt(['hello'
-])
+    .prompt([{ name: 'new age2', type: 'number', 'message': 'whats your new age' }])
     .then((answers) => {
     console.log(answers, 'answers');
     // Use user feedback for... whatever!!
