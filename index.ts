@@ -87,7 +87,7 @@ const AskQuestion = async () => {
 
 const calulator = (answer: any) => {
     if (answer.operator === "Add") {
-        return console.log(chalk.cyanBright(`${answer.num1} + ${answer.num2} =  ${answer.num1 + answer.num2}`))
+        return console.log(chalk.cyanBright(`${answer.num1} + ${answer.num2} =  ${Number(answer.num1) + Number(answer.num2)}`))
     }
     else if (answer.operator === "Substract") {
         return console.log(chalk.cyanBright(`${answer.num1} - ${answer.num2} = ${answer.num1 - answer.num2}`))
