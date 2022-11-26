@@ -1,9 +1,16 @@
 {
-  "name": "calculator",
-  "version": "1.0.0",
+  "name": "faizancalculator",
+  "version": "0.0.1",
   "main": "index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/faizansohail077/Node-typescipr-calculator.git"
+  },
   "license": "MIT",
+  "bin": {
+    "faizancalculator": "bin/index.js"
+  },
   "dependencies": {
     "chalk": "^5.1.2",
     "chalk-animation": "^2.0.3",
