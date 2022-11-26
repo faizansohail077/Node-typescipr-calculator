@@ -1,11 +1,10 @@
 import inquirer from 'inquirer';
-import chalk, { Chalk } from 'chalk';
+import chalk from 'chalk';
 import chalkAnimation from 'chalk-animation';
 
 
 const Welcome = async () => {
     let rainbow = chalkAnimation.karaoke(chalk.underline("Welcome To Faizan's Calculator"))
-
 
     await Animation()
     console.log(`_____________________
@@ -36,7 +35,7 @@ const Animation = () => {
 const AskQuestion = async () => {
     inquirer.prompt([{
         name: "num1",
-        type: "number",
+        type: "input",
         message: "Enter 1st Value",
         validate: function (value) {
             var pass = !isNaN(value)
@@ -48,7 +47,7 @@ const AskQuestion = async () => {
     },
     {
         name: "num2",
-        type: "number",
+        type: "input",
         message: "Enter 2nd Value"
     },
     {
@@ -88,16 +87,16 @@ const AskQuestion = async () => {
 
 const calulator = (answer: any) => {
     if (answer.operator === "Add") {
-        return console.log(chalk.cyan(`${answer.num1} + ${answer.num2} =  ${answer.num1 + answer.num2}`))
+        return console.log(chalk.cyanBright(`${answer.num1} + ${answer.num2} =  ${answer.num1 + answer.num2}`))
     }
     else if (answer.operator === "Substract") {
-        return console.log(chalk.cyan(`${answer.num1} - ${answer.num2} = ${answer.num1 - answer.num2}`))
+        return console.log(chalk.cyanBright(`${answer.num1} - ${answer.num2} = ${answer.num1 - answer.num2}`))
     }
     else if (answer.operator === "Divide") {
-        return console.log(chalk.cyan(`${answer.num1} / ${answer.num2} = ${answer.num1 / answer.num2}`))
+        return console.log(chalk.cyanBright(`${answer.num1} / ${answer.num2} = ${answer.num1 / answer.num2}`))
     }
     else if (answer.operator === "Multiply") {
-        return console.log(chalk.cyan(`${answer.num1} * ${answer.num2} = ${answer.num1 * answer.num2}`))
+        return console.log(chalk.cyanBright(`${answer.num1} * ${answer.num2} = ${answer.num1 * answer.num2}`))
     }
 }
 
